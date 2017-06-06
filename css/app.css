@@ -1,0 +1,19 @@
+div.other-app {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 500ms ease-out;
+}
+
+iframe.app-iframe {
+  position: absolute;
+  left: 0;
+  top: 0;
+  width: 100%;
+  height: 100%;
+  border: none;
+}
+
+/*# sourceMappingURL=app.css.map */

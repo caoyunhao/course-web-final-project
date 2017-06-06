@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8"/>
+    <title>盒在水中央</title>
+    <meta name="keywords" content="BoxInTheMiddleOfTheWater"/>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        body, html {
+            height: 100%;
+        }
+
+        body {
+            background-color: black;
+            width: 100%;
+        }
+
+        #table {
+            display: table;
+            width: 100%;
+            height: 100%;
+        }
+
+        #cell {
+            display: table-cell;
+            vertical-align: middle
+        }
+
+        #canvascontainer {
+            margin: auto;
+            outline: 1px solid white;
+        }
+
+        canvas {
+            width: 100%;
+            height: 100%;
+            display: block
+        }
+    </style>
+    <script src="BoxInTheMiddleOfTheWater.js" language="JavaScript"></script>
+</head>
+<body>
+<div id="table">
+    <div id="cell">
+        <div id="canvascontainer">
+            <canvas></canvas>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

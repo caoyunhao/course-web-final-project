@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Yun OS</title>
+
+    <link rel="stylesheet" type="text/css" href="../base/bootstrap.min.css"/>
+    <!--<link rel="stylesheet" type="text/css" href="../base/semantic/semantic.min.css"/>-->
+
+    <script type="text/javascript" src="../base/jquery.min.js"></script>
+    <script type="text/javascript" src="../base/bootstrap.min.js"></script>
+    <!--<script type="text/javascript" src="../base/semantic/semantic.min.js"></script>-->
+
+    <link rel="stylesheet" type="text/css" href="../css/index.css"/>
+    <link rel="stylesheet" type="text/css" href="../css/app.css"/>
+    <script type="text/javascript" src="../js/cookie.js"></script>
+    <script type="text/javascript" src="../js/service.js"></script>
+    <script type="text/javascript" src="../js/body-overflow-control.js"></script>
+    <script type="text/javascript" src="../js/adapt-screen.js"></script>
+    <script type="text/javascript" src="../js/form-control.js"></script>
+    <script type="text/javascript" src="../js/index.js"></script>
+    <script type="text/javascript" src="../js/check-hash.js"></script>
+</head>
+<body style="overflow-x: hidden; overflow-y: hidden">
+<div class="contain">
+    <div style="z-index:50; position: fixed; width: 100%">
+        <nav class="navbar index-nav" role="navigation" style="margin: 0; z-index: 90; position:relative;">
+            <div class="container-fluid">
+                <div class="navbar-header">
+                    <button id="nav_toggle" type="button" class="navbar-toggle" data-toggle="collapse"
+                            data-target="#navbar_collapse"
+                            style="float: left; margin-left: 15px; margin-right: 0px">
+                        <span class="sr-only"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a href="#" class="navbar-brand" data-toggle="dropdown">
+                        Yun OS
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navbar_collapse">
+                    <ul class="nav navbar-nav">
+                        <li id="nav_label_my_app" class="active"><a href="#">My App</a></li>
+                        <li id="nav_label_app_store"><a href="#">App Store</a></li>
+                        <!--<li class="dropdown">-->
+                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
+                                <!--More-->
+                                <!--<b class="caret"></b>-->
+                            <!--</a>-->
+                            <!--<ul class="dropdown-menu" style="background-color: rgba(0,0,0,0.8);">-->
+                                <!--<li><a href="#">jmeter</a></li>-->
+                                <!--<li><a href="#">EJB</a></li>-->
+                                <!--<li class="divider"></li>-->
+                                <!--<li><a href="#">Jasper Report</a></li>-->
+                            <!--</ul>-->
+                        <!--</li>-->
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </div>
+    <div id="apps_form_hidden"
+         style="position:absolute; left: -10000px; top: -10000px; width: 100%; height: 100%; z-index: 75">
+        <div id="apps_form" class="other-app" style="top: 0; left: 0;-webkit-transform: scale(0.9); opacity: 0;">
+            <iframe src="settings.html" id="settings" class="app-iframe"
+                    style="left: -10000px; top: -10000px; z-index: 10;">
+            </iframe>
+            <iframe src="http://www.hao123.com" id="app1" class="app-iframe"
+                    style="left: -10000px; top: -10000px; z-index: 10;">
+            </iframe>
+            <iframe src="app2_page.html" id="app2" class="app-iframe"
+                    style="left: -10000px; top: -10000px; z-index: 10;">
+            </iframe>
+            <iframe src="../APPs/BoxInTheMiddleOfTheWater/BoxInTheMiddleOfTheWater.html" id="BoxInTheMiddleOfTheWater" class="app-iframe"
+                    style="left: -10000px; top: -10000px; z-index: 10;">
+            </iframe>
+        </div>
+    </div>
+    <div id="app_list_hidden" style="position:absolute; top: -10000px; left: -10000px; width: 100%; height: 100%">
+        <div id="app_list" class="game-list"
+             style="min-width: 950px; min-height: 700px; opacity: 0.0;-webkit-transition: 500ms ease-out; -webkit-transform: scale(1.2)">
+            <a href="#app1" id="item1" class="item">
+                <img class="game-logo" src="../src/index/timg.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">植物大战僵尸2</span>
+                </div>
+            </a>
+            <a href="#app2" id="item2" class="item">
+                <img class="game-logo" src="../src/index/kuangyebiaoche.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">狂野飙车8</span>
+                </div>
+            </a>
+            <a href="#BoxInTheMiddleOfTheWater" id="item3" class="item">
+                <img class="game-logo" src="../src/index/chameleon.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">Chameleon</span>
+                </div>
+            </a>
+            <a href="#" id="item4" class="item">
+                <img class="game-logo" src="../src/index/hearthstone.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">炉石传说</span>
+                </div>
+            </a>
+            <a href="#" id="item5" class="item">
+                <img class="game-logo" src="../src/index/wangzherongyao.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">王者荣耀</span>
+                </div>
+            </a>
+            <a href="#" id="item6" class="item">
+                <img class="game-logo" src="../src/index/angrybirds.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">愤怒的小鸟</span>
+                </div>
+            </a>
+            <a href="#" id="item7" class="item">
+                <img class="game-logo" src="../src/index/overwatch.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">守望先锋</span>
+                </div>
+            </a>
+            <a href="#" id="item8" class="item">
+                <img class="game-logo" src="../src/index/sanguosha.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">三国杀</span>
+                </div>
+            </a>
+            <a href="#" id="item9" class="item">
+                <img class="game-logo" src="../src/index/hearthstone.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">炉石传说</span>
+                </div>
+            </a>
+            <a href="#" id="item10" class="item">
+                <img class="game-logo" src="../src/index/kuangyebiaoche.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">狂野飙车8</span>
+                </div>
+            </a>
+            <a href="#" id="item11" class="item">
+                <img class="game-logo" src="../src/index/timg.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">植物大战僵尸2</span>
+                </div>
+            </a>
+            <a href="#" id="item12" class="item">
+                <img class="game-logo" src="../src/index/overwatch.jpg"/>
+                <div class="game-label">
+                    <span class="game-text">守望先锋</span>
+                </div>
+            </a>
+            <a href="#settings" id="item13" class="item" style="-webkit-transition: 500ms ease-out;">
+                <img class="game-logo" src="../src/index/settings_icon.png"/>
+                <div class="game-label">
+                    <span class="game-text">设置</span>
+                </div>
+            </a>
+        </div>
+    </div>
+    <div id="login_form_hidden"
+         style="position:absolute; top: -10000px; left: -10000px; width: 100%; height: 100%; min-width: 950px; min-height: 700px; z-index: 5; user-select: none;">
+        <div id="login_form"
+             style="position: absolute; margin-top: -260px; margin-left: -320px; left: 50%; width: 640px; top: 50%; height: 480px; z-index: 5; user-select: none;opacity: 0.0;-webkit-transition: 500ms ease-out;">
+            <iframe src="login.html"
+                    style="position: absolute; left: 0px; right: 0px; top: 0px; bottom: 0px; border: 0"
+                    width="100%" height="100%">
+            </iframe>
+        </div>
+    </div>
+</div>
+
+</body>
+</html>

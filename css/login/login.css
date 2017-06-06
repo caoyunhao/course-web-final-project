@@ -1,0 +1,313 @@
+@import url(../fonts.css);
+html, body {
+  text-align: center;
+  font-family: "SFNSDisplay Light", 'SF Pro Display', 'shard icons';
+  margin: 0;
+  border: 0;
+  overflow: hidden;
+  font-style: normal;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+a:link, a:visited {
+  text-decoration: none;
+}
+
+div.container {
+  margin: 0px;
+  width: 100%;
+  text-align: center;
+  padding: 0px;
+}
+
+div.logo {
+  top: 50%;
+  margin-top: 10px;
+  margin-left: 10px;
+  margin-right: 10px;
+  text-align: center;
+  padding: 10px;
+  position: relative;
+}
+
+img.logo {
+  width: 141px;
+}
+
+form.login-form {
+  position: relative;
+  max-width: 328px;
+  margin-left: auto;
+  margin-right: auto;
+  font-size: 17px;
+}
+
+.container .login-text {
+  color: #ffffff;
+  max-width: 380px;
+  margin: 14px auto 13px auto;
+  font-size: 22px;
+  line-height: 1.45455;
+  font-weight: 300;
+  letter-spacing: 0.016em;
+}
+
+div.input {
+  position: relative;
+  background-color: #ffffff;
+  margin-left: auto;
+  margin-right: auto;
+  width: 100%;
+  border: 1px solid rgba(0, 0, 0, 0.3);
+  box-sizing: border-box;
+}
+
+div.input.focus {
+  border: 1px solid #1780fb;
+  z-index: 25;
+}
+
+div.account {
+  border-top-left-radius: 6px;
+  border-top-right-radius: 6px;
+  border-bottom-left-radius: 0px;
+  border-bottom-right-radius: 0px;
+}
+
+div.password {
+  border-bottom-left-radius: 6px;
+  border-bottom-right-radius: 6px;
+  margin-top: -1px;
+}
+
+input.text-field {
+  width: 100%;
+  border: 0px;
+  padding: 10px 12px;
+  border-radius: 6px;
+  outline: none;
+  font-size: 17px;
+  height: inherit;
+  box-sizing: border-box;
+  vertical-align: middle;
+  background: transparent;
+}
+
+input.field-password {
+  padding-right: 38px;
+}
+
+div.hide {
+  display: none !important;
+}
+
+.pop-container {
+  position: relative;
+  -webkit-animation: fade-in 200ms ease-in-out;
+  -o-animation: fade-in 200ms ease-in-out;
+  animation: fade-in 200ms ease-in-out;
+}
+
+.pop-container.error {
+  margin: auto;
+  max-width: 305px;
+}
+
+.signin-error {
+  width: 100%;
+  color: #494949;
+  z-index: 20000000000;
+}
+
+.pop-container .error {
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 600;
+  color: #503E30;
+  background-color: #FAE9A3;
+  position: absolute;
+  width: 100%;
+  margin-left: -50%;
+  border-radius: 5px;
+  left: 50%;
+  border: 1px solid rgba(185, 149, 1, 0.47);
+  box-shadow: 0px 5px 10px 2px rgba(0, 0, 0, 0.1);
+  margin-top: 5px;
+  padding: 11px;
+}
+
+.pop-container .error:before {
+  width: 15px;
+  height: 15px;
+  background-color: #FAE9A3;
+  content: "";
+  position: absolute;
+  left: 47.2%;
+  -webkit-transform: rotate(135deg) skewX(5deg) skewY(5deg);
+  -ms-transform: rotate(135deg) skewX(5deg) skewY(5deg);
+  -o-transform: rotate(135deg) skewX(5deg) skewY(5deg);
+  transform: rotate(135deg) skewX(5deg) skewY(5deg);
+  top: -8px;
+  border-left: 1px solid rgba(185, 149, 1, 0.47);
+  border-bottom: 1px solid rgba(185, 149, 1, 0.47);
+  box-shadow: -1px 1px 2px -1px rgba(185, 149, 1, 0.47);
+  box-sizing: border-box;
+}
+
+.pop-container .forget-pwd {
+  color: #503E30;
+  text-decoration: underline;
+  font-size: 14px;
+  line-height: 1.5;
+  font-weight: 400;
+}
+
+button.submit {
+  font-style: normal;
+  font-size: 17px;
+  border: 1px solid transparent;
+  position: absolute;
+  top: 41px;
+  right: 3px;
+  cursor: pointer;
+  padding: 5px;
+  outline: none;
+  z-index: 100;
+  background: transparent;
+}
+
+button.submit:focus {
+  outline: none;
+}
+
+button.submit.disable {
+  opacity: 0.3;
+  pointer-events: none;
+}
+
+.icon {
+  font-family: "shard icons";
+  font-style: normal;
+  font-size: 26px;
+}
+
+i.icon-sign-in:before {
+  content: '\f125';
+}
+
+div.remember_me {
+  height: 20px;
+  border-radius: 15px;
+  width: 150px;
+  margin-left: auto;
+  margin-right: auto;
+  margin-top: 10px;
+}
+
+input.remember_me {
+  margin-top: 10px;
+  margin-bottom: 10px;
+  color: #FFFFFF;
+}
+
+div.remember_me_checkbox {
+  text-align: center;
+  float: left;
+  margin-top: 2px;
+}
+
+div.remember_me_checkbox label {
+  cursor: pointer;
+  width: 15px;
+  height: 15px;
+  background-color: rgba(255, 255, 255, 0);
+  border-radius: 5px;
+  border: 1px solid #FFFFFF;
+  display: inline-block;
+}
+
+div.remember_me_checkbox label:after {
+  opacity: 0.0;
+  content: '0';
+  width: 9px;
+  height: 6px;
+  background-color: transparent;
+  border: 2px solid #FFFFFF;
+  border-bottom: none;
+  border-left: none;
+  transform: rotate(135deg);
+  display: inline-block;
+  color: transparent;
+}
+
+div.remember_me_checkbox input[type=checkbox]:checked + label:after {
+  opacity: 1;
+}
+
+div.createid {
+  margin-top: 30px;
+}
+
+div.login-help {
+  font-size: 5px;
+  color: white;
+  text-align: center;
+}
+
+.display-none {
+  display: none;
+}
+
+p.create {
+  font-size: 14px;
+}
+
+div.separator {
+  width: 100%;
+  max-width: 328px;
+  height: 1px;
+  background-image: url("../../src/login/HR_gradient_light.png");
+  background-size: cover;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+a.remember_me_text {
+  color: #FFFFFF;
+}
+
+div.login-help {
+  font-size: 5px;
+  color: white;
+  text-align: center;
+}
+
+a.forget {
+  text-decoration: none;
+  color: #FFFFFF;
+  font-size: 15px;
+}
+
+a.forget:hover {
+  text-decoration: underline;
+}
+
+a.create {
+  text-decoration: none;
+  color: #EEEEEE;
+  font-size: 14px;
+  margin-top: 20px;
+}
+
+a.create:hover {
+  color: #FFFFFF;
+}
+
+/*# sourceMappingURL=login.css.map */

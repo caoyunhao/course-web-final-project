@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Login</title>
+    <link rel="stylesheet" type="text/css" href="../css/login/login.css"/>
+    <script type="text/javascript" src="../base/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/stop-propagation.js"></script>
+    <script type="text/javascript" src="../js/login/login_main.js"></script>
+</head>
+<body>
+<div class="container">
+    <div id="logo" style="user-select: none;">
+        <img class="logo" src="../src/login/logo.png"/>
+    </div>
+    <p style="user-select: none;" class="login-text">登陆 Yun OS</p>
+    <form id="login_form" class="login-form">
+        <div id="div_id" class="input account">
+            <input id="input_id" class="text-field input-field-id" type="email" placeholder="Yun ID"/>
+            <label for="input_id"></label>
+        </div>
+        <div id="div_pwd" class="input password">
+            <input id="input_pwd" class="text-field field-password" type="password" placeholder="密码"/>
+            <label for="input_pwd"></label>
+        </div>
+        <div id="error" class="pop-container error signin-error hide">
+            <div id="error_msg" class="error">
+                <p>您的 YunOS ID 或密码不正确。</p>
+                <a id="forget_pwd_link" target="_blank" href="#" class="forget-pwd">忘记密码？</a>
+            </div>
+        </div>
+        <button id="submit_btn" type="button" class="submit disable">
+            <i class="icon icon-sign-in"></i>
+        </button>
+    </form>
+    <div class="remember_me">
+        <div class="remember_me_checkbox">
+            <input type="checkbox" value="1" id="remember_me_check" class="display-none"/>
+            <label for="remember_me_check"></label>
+        </div>
+        <a class="remember_me_text" style="user-select: none;">&nbsp;保持我的登录状态</a>
+    </div>
+    <div class="login-help">
+        <div class="separator"></div>
+        <a href="#" class="forget">忘记了 Yun ID 或密码？</a>
+        <div class="createid">
+            <p class="create">有 Yun ID &nbsp;吗？<a href="#" class="create">现在创建一个</a></p>
+        </div>
+    </div>
+</div>
+</body>
+</html>

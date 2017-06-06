@@ -1,0 +1,120 @@
+@charset "UTF-8";
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+}
+
+body {
+  margin: 0;
+  background-image: url("../src/index/background.png");
+  background-size: contain;
+  background-repeat: repeat-x;
+  background-attachment: fixed;
+  font-family: '.萍方-简', 'SF Pro Display';
+  width: 100%;
+  height: 100%;
+}
+
+.index-nav {
+  color: white;
+  color: rgba(255, 255, 255, 0.8);
+  background-color: rgba(0, 0, 0, 0.8);
+  height: auto;
+}
+
+.index-nav a {
+  color: inherit;
+  user-select: none;
+  transition: 200ms ease-out;
+  -webkit-transition: 200ms ease-out;
+}
+
+.index-nav a:hover {
+  color: white !important;
+}
+
+.navbar-nav .active {
+  color: white !important;
+  pointer-events: none;
+}
+
+.index-nav .navbar-toggle .icon-bar {
+  background-color: white;
+  background-color: rgba(255, 255, 255, 0.8);
+  transition: 200ms ease-out;
+  -webkit-transition: 200ms ease-out;
+}
+
+.index-nav .navbar-toggle.active .icon-bar {
+  background-color: white;
+}
+
+.index-nav .navbar-toggle:hover .icon-bar {
+  background-color: white;
+}
+
+div.contain {
+  width: 100%;
+  height: 100%;
+  background-color: transparent;
+}
+
+div.game-list {
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  height: 100%;
+  width: 100%;
+  overflow: auto;
+  user-select: none;
+}
+
+a.item {
+  z-index: 15;
+  position: absolute;
+  left: 0px;
+  top: 0px;
+  width: 142px;
+  height: 142px;
+  text-decoration: none;
+  background-size: cover;
+  cursor: default;
+}
+
+img.game-logo {
+  width: 142px;
+  height: 142px;
+  border-radius: 22%;
+  user-select: none;
+  cursor: pointer;
+}
+
+div.game-label {
+  position: absolute;
+  top: 161px;
+  left: -30px;
+  width: 202px;
+  text-align: center;
+  user-select: none;
+  cursor: default;
+  pointer-events: none;
+}
+
+span.game-text {
+  color: white;
+  text-shadow: #000 0 0 25px;
+  text-align: center;
+  font-size: 21px;
+  cursor: pointer;
+  pointer-events: all;
+}
+
+/*# sourceMappingURL=index.css.map */
