@@ -1,0 +1,50 @@
+<html>
+<head>
+    <meta charset="UTF-8">
+    <!--<meta name="viewport"-->
+    <!--content="width=device-width, user-scalable=no, initial-scale=1.0, maximum-scale=1.0, minimum-scale=1.0">-->
+    <!--<meta http-equiv="X-UA-Compatible" content="ie=edge">-->
+    <script type="text/javascript" src="base/jquery.min.js"></script>
+    <script type="text/javascript" src="tools/virtual-directionkeys/virtual-directionkeys.js"></script>
+    <title>Document</title>
+    <style>
+        div {
+            border: solid 1px black;
+        }
+        .parent {
+            overflow-x: visible;
+            overflow-y: visible;
+            width: 100px;
+            height: 100px;
+            background-color: #4cae4c
+        }
+
+        .child {
+            position: relative;
+            width: 50px;
+            height: 50px;
+            background-color: #23527c;
+            margin-top: 5px;
+            z-index: 50;
+        }
+    </style>
+</head>
+<body>
+
+<div class="parent" style="z-index: 10;">
+    <!-- Lots of the following divs -->
+    <div class="child">
+
+    </div>
+    <div class="child">
+
+    </div>
+    <div class="child">
+
+    </div>
+    <div class="child">
+
+    </div>
+</div>
+</body>
+</html>

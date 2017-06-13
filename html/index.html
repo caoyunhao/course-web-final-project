@@ -5,159 +5,262 @@
     <title>Yun OS</title>
 
     <link rel="stylesheet" type="text/css" href="../base/bootstrap.min.css"/>
+    <link rel="stylesheet" type="text/css" href="../base/owl.carousel.css"/>
+    <link rel="stylesheet" type="text/css" href="../base/owl.theme.default.css"/>
     <!--<link rel="stylesheet" type="text/css" href="../base/semantic/semantic.min.css"/>-->
-
-    <script type="text/javascript" src="../base/jquery.min.js"></script>
-    <script type="text/javascript" src="../base/bootstrap.min.js"></script>
     <!--<script type="text/javascript" src="../base/semantic/semantic.min.js"></script>-->
+
+    <!-- ** 华丽的分割线 ** -->
 
     <link rel="stylesheet" type="text/css" href="../css/index.css"/>
     <link rel="stylesheet" type="text/css" href="../css/app.css"/>
-    <script type="text/javascript" src="../js/cookie.js"></script>
-    <script type="text/javascript" src="../js/service.js"></script>
-    <script type="text/javascript" src="../js/body-overflow-control.js"></script>
-    <script type="text/javascript" src="../js/adapt-screen.js"></script>
-    <script type="text/javascript" src="../js/form-control.js"></script>
-    <script type="text/javascript" src="../js/index.js"></script>
-    <script type="text/javascript" src="../js/check-hash.js"></script>
+
 </head>
-<body style="overflow-x: hidden; overflow-y: hidden">
-<div class="contain">
-    <div style="z-index:50; position: fixed; width: 100%">
-        <nav class="navbar index-nav" role="navigation" style="margin: 0; z-index: 90; position:relative;">
-            <div class="container-fluid">
-                <div class="navbar-header">
-                    <button id="nav_toggle" type="button" class="navbar-toggle" data-toggle="collapse"
-                            data-target="#navbar_collapse"
-                            style="float: left; margin-left: 15px; margin-right: 0px">
-                        <span class="sr-only"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                        <span class="icon-bar"></span>
-                    </button>
-                    <a href="#" class="navbar-brand" data-toggle="dropdown">
-                        Yun OS
-                    </a>
-                </div>
-                <div class="collapse navbar-collapse" id="navbar_collapse">
-                    <ul class="nav navbar-nav">
-                        <li id="nav_label_my_app" class="active"><a href="#">My App</a></li>
-                        <li id="nav_label_app_store"><a href="#">App Store</a></li>
-                        <!--<li class="dropdown">-->
-                            <!--<a href="#" class="dropdown-toggle" data-toggle="dropdown">-->
-                                <!--More-->
-                                <!--<b class="caret"></b>-->
-                            <!--</a>-->
-                            <!--<ul class="dropdown-menu" style="background-color: rgba(0,0,0,0.8);">-->
-                                <!--<li><a href="#">jmeter</a></li>-->
-                                <!--<li><a href="#">EJB</a></li>-->
-                                <!--<li class="divider"></li>-->
-                                <!--<li><a href="#">Jasper Report</a></li>-->
-                            <!--</ul>-->
-                        <!--</li>-->
-                    </ul>
-                </div>
+<body style="overflow-x: hidden; overflow-y: hidden; min-width: 950px; min-height: 752px;">
+<div id="nav-contain" style="z-index:10000; position: relative; width: 100%">
+    <nav class="navbar index-nav" role="navigation" style="margin: 0; z-index: 90; position:relative;">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <button id="nav_toggle" type="button" class="navbar-toggle" data-toggle="collapse"
+                        data-target="#navbar_collapse"
+                        style="float: left; margin-left: 15px; margin-right: 0px">
+                    <span class="sr-only"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a href="#" class="navbar-brand" data-toggle="dropdown">
+                    Yun OS
+                </a>
             </div>
-        </nav>
+            <div class="collapse navbar-collapse" id="navbar_collapse">
+                <ul class="nav navbar-nav">
+                    <li id="nav_label_my_app" class="active"><a href="#">Home</a></li>
+                    <li id="nav_label_app_store"><a href="javascript:void(0)">App Store</a></li>
+                </ul>
+            </div>
+            <div style="position:absolute;top: 0px; right: 15px; height: 100%; padding-top: 15px; padding-bottom: 15px">
+                123456
+            </div>
+        </div>
+    </nav>
+    <div id="app_store_form"
+         style="position: absolute; top: -600px; width: 100%; height: 500px; background-color: rgba(0, 0, 0, 0.8); visibility:hidden">
+        <iframe src="app-store.html" class="app-store" style="width: 100%; height: 95%;">
+
+        </iframe>
+        <div style="width: 100%; height: 5%; background-color: #ffffff">
+
+        </div>
     </div>
+</div>
+<div id="contain" class="contain" style="position: relative;">
+
     <div id="apps_form_hidden"
          style="position:absolute; left: -10000px; top: -10000px; width: 100%; height: 100%; z-index: 75">
         <div id="apps_form" class="other-app" style="top: 0; left: 0;-webkit-transform: scale(0.9); opacity: 0;">
             <iframe src="settings.html" id="settings" class="app-iframe"
-                    style="left: -10000px; top: -10000px; z-index: 10;">
+                    style="left: -10000px; top: -10000px; z-index: 10; width: 1000px; height: 1000px">
             </iframe>
-            <iframe src="http://www.hao123.com" id="app1" class="app-iframe"
-                    style="left: -10000px; top: -10000px; z-index: 10;">
+            <!--<iframe src="http://www.hao123.com" id="app1" class="app-iframe"-->
+            <!--style="left: -10000px; top: -10000px; z-index: 10;">-->
+            <!--</iframe>-->
+            <!--<iframe src="app2_page.html" id="app2" class="app-iframe"-->
+            <!--style="left: -10000px; top: -10000px; z-index: 10; width: 1000px; height: 1000px">-->
+            <!--</iframe>-->
+            <iframe src="../APPs/BoxInTheMiddleOfTheWater/BoxInTheMiddleOfTheWater.html" id="BoxInTheMiddleOfTheWater"
+                    class="app-iframe"
+                    style="left: -10000px; top: -10000px; z-index: 10; width: 1000px; height: 1000px">
             </iframe>
-            <iframe src="app2_page.html" id="app2" class="app-iframe"
-                    style="left: -10000px; top: -10000px; z-index: 10;">
+            <iframe src="http://w.qq.com" id="qq" class="app-iframe"
+                    style="left: -10000px; top: -10000px; z-index: 10; width: 1000px; height: 1000px">
             </iframe>
-            <iframe src="../APPs/BoxInTheMiddleOfTheWater/BoxInTheMiddleOfTheWater.html" id="BoxInTheMiddleOfTheWater" class="app-iframe"
-                    style="left: -10000px; top: -10000px; z-index: 10;">
-            </iframe>
+            <!--<iframe src="https://y.qq.com/portal/profile.html" id="qqmusic" class="app-iframe"-->
+            <!--style="left: -10000px; top: -10000px; z-index: 10; width: 1000px; height: 1000px">-->
+            <!--</iframe>-->
+            <!--<iframe src="http://web.sanguosha.com/" id="sanguosha" class="app-iframe"-->
+            <!--style="left: -10000px; top: -10000px; z-index: 10; width: 1000px; height: 1000px">-->
+            <!--</iframe>-->
+            <!--<iframe src="https://im.dingtalk.com/" id="dingding" class="app-iframe"-->
+            <!--style="left: -10000px; top: -10000px; z-index: 10; width: 1000px; height: 1000px">-->
+            <!--</iframe>-->
+            <!--<iframe src="http://v.qq.com/" id="tencent-video" class="app-iframe"-->
+            <!--style="left: -10000px; top: -10000px; z-index: 10; width: 1000px; height: 1000px">-->
+            <!--</iframe>-->
+            <!--<iframe src="https://music.163.com/" id="netease-cloud-music" class="app-iframe" sandbox="allow-scripts allow-popups allow-forms allow-pointer-lock"-->
+            <!--style="left: -10000px; top: -10000px; z-index: 10; width: 1000px; height: 1000px">-->
+
+            <!--</iframe>-->
+            <!--<iframe src="https://wx.qq.com/" id="wechat" class="app-iframe" sandbox="allow-scripts allow-popups allow-forms allow-pointer-lock"-->
+            <!--style="left: -10000px; top: -10000px; z-index: 10; width: 1000px; height: 1000px">-->
+            <!--</iframe>-->
         </div>
     </div>
-    <div id="app_list_hidden" style="position:absolute; top: -10000px; left: -10000px; width: 100%; height: 100%">
-        <div id="app_list" class="game-list"
+    <div id="app_list_hidden" style="position:relative; top: -10000px; left: -10000px;">
+        <div id="app_list" class="app-list"
              style="min-width: 950px; min-height: 700px; opacity: 0.0;-webkit-transition: 500ms ease-out; -webkit-transform: scale(1.2)">
-            <a href="#app1" id="item1" class="item">
-                <img class="game-logo" src="../src/index/timg.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">植物大战僵尸2</span>
+            <div id="app_pages" class="owl-carousel">
+                <div id="app_page" class="app_page" style="">
+                    <a href="#app1" id="page1-item1" class="item">
+                        <img class="game-logo" src="../src/index/timg.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">植物大战僵尸2</span>
+                        </div>
+                    </a>
+                    <a href="#wechat" id="page1-item2" class="item">
+                        <img class="game-logo" src="../src/index/wechat.svg"/>
+                        <div class="game-label">
+                            <span class="game-text">微信</span>
+                        </div>
+                    </a>
+                    <a href="#BoxInTheMiddleOfTheWater" id="page1-item3" class="item">
+                        <img class="game-logo" src="../src/index/chameleon.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">Chameleon</span>
+                        </div>
+                    </a>
+                    <a href="#" id="page1-item4" class="item">
+                        <img class="game-logo" src="../src/index/hearthstone.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">炉石传说</span>
+                        </div>
+                    </a>
+                    <a href="#" id="page1-item5" class="item">
+                        <img class="game-logo" src="../src/index/wangzherongyao.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">王者荣耀</span>
+                        </div>
+                    </a>
+                    <a href="#" id="page1-item6" class="item">
+                        <img class="game-logo" src="../src/index/angrybirds.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">愤怒的小鸟</span>
+                        </div>
+                    </a>
+                    <a href="#dingding" id="page1-item7" class="item">
+                        <img class="game-logo" src="../src/index/dingding.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">钉钉</span>
+                        </div>
+                    </a>
+                    <a href="#sanguosha" id="page1-item8" class="item">
+                        <img class="game-logo" src="../src/index/sanguosha.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">三国杀</span>
+                        </div>
+                    </a>
+                    <a href="#qq" id="page1-item9" class="item">
+                        <img class="game-logo" src="../src/index/qq_logo.png"/>
+                        <div class="game-label">
+                            <span class="game-text">QQ</span>
+                        </div>
+                    </a>
+                    <a href="#netease-cloud-music" id="page1-item10" class="item">
+                        <img class="game-logo" src="../src/index/netease-cloud-music.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">网易云音乐</span>
+                        </div>
+                    </a>
+                    <a href="#qqmusic" id="page1-item11" class="item">
+                        <img class="game-logo" src="../src/index/qq_music_logo.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">QQ音乐</span>
+                        </div>
+                    </a>
+                    <a href="#" id="page1-item12" class="item">
+                        <img class="game-logo" src="../src/index/overwatch.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">守望先锋</span>
+                        </div>
+                    </a>
+                    <a href="#settings" id="page1-item13" class="item" style="-webkit-transition: 500ms ease-out;">
+                        <img class="game-logo" src="../src/index/settings_icon.png"/>
+                        <div class="game-label">
+                            <span class="game-text">设置</span>
+                        </div>
+                    </a>
                 </div>
-            </a>
-            <a href="#app2" id="item2" class="item">
-                <img class="game-logo" src="../src/index/kuangyebiaoche.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">狂野飙车8</span>
+                <div class="app_page" style="">
+                    <a href="#app1" id="page2-item1" class="item">
+                        <img class="game-logo" src="../src/index/timg.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">植物大战僵尸2</span>
+                        </div>
+                    </a>
+                    <a href="#wechat" id="page2-item2" class="item">
+                        <img class="game-logo" src="../src/index/wechat.svg"/>
+                        <div class="game-label">
+                            <span class="game-text">微信</span>
+                        </div>
+                    </a>
+                    <a href="#BoxInTheMiddleOfTheWater" id="page2-item3" class="item">
+                        <img class="game-logo" src="../src/index/chameleon.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">Chameleon</span>
+                        </div>
+                    </a>
+                    <a href="#" id="page2-item4" class="item">
+                        <img class="game-logo" src="../src/index/hearthstone.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">炉石传说</span>
+                        </div>
+                    </a>
+                    <a href="#" id="page2-item5" class="item">
+                        <img class="game-logo" src="../src/index/wangzherongyao.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">王者荣耀</span>
+                        </div>
+                    </a>
+                    <a href="#" id="page2-item6" class="item">
+                        <img class="game-logo" src="../src/index/angrybirds.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">愤怒的小鸟</span>
+                        </div>
+                    </a>
+                    <a href="#dingding" id="page2-item7" class="item">
+                        <img class="game-logo" src="../src/index/dingding.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">钉钉</span>
+                        </div>
+                    </a>
+                    <a href="#sanguosha" id="page2-item8" class="item">
+                        <img class="game-logo" src="../src/index/sanguosha.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">三国杀</span>
+                        </div>
+                    </a>
+                    <a href="#qq" id="page2-item9" class="item">
+                        <img class="game-logo" src="../src/index/qq_logo.png"/>
+                        <div class="game-label">
+                            <span class="game-text">QQ</span>
+                        </div>
+                    </a>
+                    <a href="#netease-cloud-music" id="page2-item10" class="item">
+                        <img class="game-logo" src="../src/index/netease-cloud-music.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">网易云音乐</span>
+                        </div>
+                    </a>
+                    <a href="#qqmusic" id="page2-item11" class="item">
+                        <img class="game-logo" src="../src/index/qq_music_logo.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">QQ音乐</span>
+                        </div>
+                    </a>
+                    <a href="#" id="page2-item12" class="item">
+                        <img class="game-logo" src="../src/index/overwatch.jpg"/>
+                        <div class="game-label">
+                            <span class="game-text">守望先锋</span>
+                        </div>
+                    </a>
+                    <a href="#settings" id="page2-item13" class="item" style="-webkit-transition: 500ms ease-out;">
+                        <img class="game-logo" src="../src/index/settings_icon.png"/>
+                        <div class="game-label">
+                            <span class="game-text">设置</span>
+                        </div>
+                    </a>
                 </div>
-            </a>
-            <a href="#BoxInTheMiddleOfTheWater" id="item3" class="item">
-                <img class="game-logo" src="../src/index/chameleon.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">Chameleon</span>
-                </div>
-            </a>
-            <a href="#" id="item4" class="item">
-                <img class="game-logo" src="../src/index/hearthstone.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">炉石传说</span>
-                </div>
-            </a>
-            <a href="#" id="item5" class="item">
-                <img class="game-logo" src="../src/index/wangzherongyao.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">王者荣耀</span>
-                </div>
-            </a>
-            <a href="#" id="item6" class="item">
-                <img class="game-logo" src="../src/index/angrybirds.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">愤怒的小鸟</span>
-                </div>
-            </a>
-            <a href="#" id="item7" class="item">
-                <img class="game-logo" src="../src/index/overwatch.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">守望先锋</span>
-                </div>
-            </a>
-            <a href="#" id="item8" class="item">
-                <img class="game-logo" src="../src/index/sanguosha.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">三国杀</span>
-                </div>
-            </a>
-            <a href="#" id="item9" class="item">
-                <img class="game-logo" src="../src/index/hearthstone.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">炉石传说</span>
-                </div>
-            </a>
-            <a href="#" id="item10" class="item">
-                <img class="game-logo" src="../src/index/kuangyebiaoche.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">狂野飙车8</span>
-                </div>
-            </a>
-            <a href="#" id="item11" class="item">
-                <img class="game-logo" src="../src/index/timg.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">植物大战僵尸2</span>
-                </div>
-            </a>
-            <a href="#" id="item12" class="item">
-                <img class="game-logo" src="../src/index/overwatch.jpg"/>
-                <div class="game-label">
-                    <span class="game-text">守望先锋</span>
-                </div>
-            </a>
-            <a href="#settings" id="item13" class="item" style="-webkit-transition: 500ms ease-out;">
-                <img class="game-logo" src="../src/index/settings_icon.png"/>
-                <div class="game-label">
-                    <span class="game-text">设置</span>
-                </div>
-            </a>
+            </div>
         </div>
     </div>
     <div id="login_form_hidden"
@@ -173,4 +276,17 @@
 </div>
 
 </body>
+<script type="text/javascript" src="../base/jquery.min.js"></script>
+<script type="text/javascript" src="../base/bootstrap.min.js"></script>
+<script type="text/javascript" src="../base/owl.carousel.js"></script>
+
+<script type="text/javascript" src="../js/TransitionEndEvent.js"></script>
+<script type="text/javascript" src="../js/cookie.js"></script>
+<script type="text/javascript" src="../js/service.js"></script>
+<script type="text/javascript" src="../js/body-overflow-control.js"></script>
+<script type="text/javascript" src="../js/adapt-screen.js"></script>
+<script type="text/javascript" src="../js/form-control.js"></script>
+<script type="text/javascript" src="../js/index.js"></script>
+<script type="text/javascript" src="../js/check-hash.js"></script>
+<script type="text/javascript" src="../js/on-ready.js"></script>
 </html>

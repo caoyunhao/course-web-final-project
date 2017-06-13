@@ -1,0 +1,225 @@
+@charset "UTF-8";
+@font-face {
+  font-family: 'SF Pro Display';
+  src: url("../fonts/sf-pro-text_light.woff") format("woff");
+}
+@font-face {
+  font-family: 'SFNSDisplay Light';
+  src: url("../fonts/SFNSDisplay-Light.woff") format("woff");
+}
+@font-face {
+  font-family: 'SF Pro Icons Regular';
+  src: url("../fonts/SFProIcons_regular.woff") format("woff");
+}
+@font-face {
+  font-family: 'shard icons';
+  src: url("../fonts/shared-icons.woff") format("woff");
+}
+* {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+html {
+  width: 100%;
+  height: 100%;
+  background-color: #ffffff;
+}
+
+body {
+  margin: 0;
+  background-color: rgba(0, 0, 0, 0.9);
+  background-attachment: fixed;
+  font-family: 'SF Pro Display', '.萍方-简';
+  font-weight: 300;
+  width: 100%;
+  height: 100%;
+  color: black;
+  color: rgba(255, 255, 255, 0.9);
+  min-width: 500px;
+  overflow: hidden;
+}
+
+a, p, span, button {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  display: block;
+}
+
+button {
+  outline: none;
+}
+
+@media screen and (max-width: 499px) {
+  body {
+    overflow-x: auto;
+  }
+}
+nav {
+  width: 100%;
+  height: 75px;
+  background-color: rgba(0, 0, 0, 0.9);
+  color: rgba(255, 255, 255, 0.9);
+}
+
+nav.nav-top {
+  height: auto;
+  border-bottom-style: solid;
+  border-bottom-color: rgba(255, 255, 255, 0.9);
+  border-bottom-width: 1px;
+}
+
+nav.nav-top div.nav-top-contain {
+  height: 100%;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  font-size: 2.2em;
+}
+
+nav.nav-top div.nav-top-contain p.title {
+  text-align: center;
+  padding: 10px;
+}
+
+nav.nav-bottom {
+  border-top-style: solid;
+  border-top-color: rgba(255, 255, 255, 0.9);
+  border-top-width: 1px;
+}
+
+nav.nav-bottom div.nav-contain {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+}
+
+nav.nav-bottom div.nav-contain .nav-item {
+  display: block;
+  min-width: 100px;
+  width: 100px;
+  text-align: center;
+  padding: 10px;
+  color: rgba(255, 255, 255, 0.9);
+  text-decoration: none;
+  cursor: default;
+  user-select: none;
+  pointer-events: none;
+  background: transparent;
+  -webkit-transition: 200ms, easy-out;
+}
+
+nav.nav-bottom div.nav-contain .nav-item:hover {
+  color: rgba(1, 159, 232, 0.9);
+}
+
+nav.nav-bottom div.nav-contain .nav-item.active {
+  color: rgba(1, 159, 232, 0.9);
+}
+
+nav.nav-bottom div.nav-contain .nav-item div.nav-item-contain {
+  cursor: pointer;
+  pointer-events: all;
+}
+
+nav.nav-bottom div.nav-contain .nav-item.active div.nav-item-contain {
+  cursor: default;
+}
+
+nav.nav-bottom div.nav-contain .nav-item p {
+  margin: 0 auto;
+}
+
+nav.nav-bottom div.nav-contain .nav-item p.nav-icon {
+  font-size: 2.2em;
+}
+
+div.contain {
+  width: 100%;
+  overflow-x: hidden;
+  overflow-y: visible;
+}
+
+div.contain div.owl-carousel.slide-content {
+  height: 100%;
+}
+
+div.contain div.slide {
+  width: 100%;
+}
+
+div.contain div.slide div.owl-carousel .slide-item {
+  display: block;
+  width: 100%;
+}
+
+div.contain div.slide div.owl-carousel .slide-item img {
+  display: block;
+  width: 100%;
+  height: 100%;
+}
+
+div.contain div.contain-kind {
+  position: relative;
+  padding-top: 10px;
+}
+
+div.contain div.contain-kind .title {
+  font-size: 1.8em;
+  margin: 10px;
+}
+
+div.contain div.contain-kind .title p {
+  margin-left: 5%;
+}
+
+div.contain div.contain-kind .kind-contain {
+  padding: 10px 0 10px 0;
+}
+
+div.contain div.contain-kind div.owl-carousel .kind-item {
+  user-select: none;
+  width: 100px;
+  cursor: pointer;
+  text-decoration: none;
+  -webkit-transition: 200ms easy-out;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+div.contain div.contain-kind div.owl-carousel .kind-item:hover {
+  color: rgba(1, 159, 232, 0.9);
+}
+
+div.contain div.contain-kind div.owl-carousel .kind-item img {
+  border-radius: 22%;
+}
+
+.kind-item p {
+  margin-top: 5px;
+}
+
+.kind-item .item-info {
+  font-weight: 300;
+}
+
+.item-info .app-name {
+  color: rgba(255, 255, 255, 0.9);
+}
+
+.item-info .app-kind, .item-info .app-price {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.contain-kind .kind-divide {
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  height: 100%;
+  margin-left: 5%;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.7);
+  z-index: -100;
+}
+
+/*# sourceMappingURL=app-store.css.map */

@@ -4,11 +4,11 @@
 
 $(document).ready(function () {
     console.log('check-hash.js is ready');
-    // $('#item13').click(function () {
-    //     openApp('settings');
-    // });
-    openPageByHash(true)
 });
+
+function checkHashLoad() {
+    openPageByHash(false)
+}
 
 
 window.onhashchange = function () {
@@ -44,6 +44,7 @@ function openPageByHash(isFirst) {
     }
     // 未登录
     else {
+        appAdaptScreen();
         showLoginForm();
     }
 }
