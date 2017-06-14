@@ -32,7 +32,7 @@ body {
   width: 100%;
   height: 100%;
   //color: black;
-  color: $white;
+  color: $white-trans-9;
   min-width: 500px;
   overflow: hidden;
 }
@@ -61,15 +61,15 @@ button {
 nav {
   width: 100%;
   height: 75px;
-  background-color: $dark;
-  color: $white;
+  background-color: $dark-trans-9;
+  color: $white-trans-9;
 }
 
 nav.nav-top {
   height: auto;
   border-bottom: {
     style: solid;
-    color: $white;
+    color: $white-trans-9;
     width: 1px;
   }
 }
@@ -81,18 +81,37 @@ nav.nav-top {
   align-items: center;
 }
 
-.flex-row.flex-start {
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row.flex-start, .flex-column.flex-start{
   justify-content: flex-start;
+}
+
+.flex-row.flex-items-start, .flex-column.flex-items-start {
+  align-items: flex-start;
 }
 
 nav.nav-top div.nav-top-contain {
   height: 100%;
   font-size: 2.2em;
+  padding: 10px;
+}
+
+nav.nav-top div.nav-top-contain .nav-item {
+  display: none;
+}
+
+nav.nav-top div.nav-top-contain .nav-item.active {
+  display: block;
 }
 
 nav.nav-top div.nav-top-contain p.title {
   text-align: center;
-  padding: 10px;
 }
 
 nav.nav-bottom {
@@ -100,7 +119,7 @@ nav.nav-bottom {
   //bottom: 0px;
   border-top: {
     style: solid;
-    color: $white;
+    color: $white-trans-9;
     width: 1px;
   }
 ;
@@ -119,7 +138,7 @@ nav.nav-bottom div.nav-contain .nav-item {
   width: 100px;
   text-align: center;
   padding: 10px;
-  color: $white;
+  color: $white-trans-9;
   text-decoration: none;
   cursor: default;
   user-select: none;
@@ -213,7 +232,7 @@ div.contain div.contain-kind div.owl-carousel .kind-item {
   cursor: pointer;
   text-decoration: none;
   -webkit-transition: 200ms easy-out;
-  color: $white;
+  color: $white-trans-9;
 }
 
 div.contain div.contain-kind div.owl-carousel .kind-item:hover {
@@ -230,15 +249,15 @@ div.contain div.contain-kind div.owl-carousel .kind-item p {
 
 div.contain div.contain-kind div.owl-carousel .kind-item .item-info {
   //width: 100%;
-  font-weight: $font-tine;
+  font-weight: $font-weight-300;
 }
 
 div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-name {
-  color: $white;
+  color: $white-trans-9;
 }
 
 div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-kind, .item-info .app-price {
-  color: $white-dark;
+  color: $gray-trans-9;
 }
 
 .logo {
@@ -269,26 +288,26 @@ div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-kind, .
   width: 100%;
   height: 100%;
   margin-left: 5%;
-  border-bottom: solid 1px $white-dark;
+  border-bottom: solid 1px $white-trans-3;
   //z-index: -100;
 }
 
 .contain .category-kind {
-  border-top: solid 1px $white-dark;
+  border-top: solid 1px $white-trans-3;
 }
 
 .contain .category-kind .kind-name {
   padding-top: 25px;
   padding-left: 15px;
   padding-bottom: 15px;
-  color: $white-dim;
+  color: $white-trans-7;
   background-color: transparent;
   font-size: 1.2em;
 }
 
 .contain .category-kind .kind-items {
-  border-top: solid 1px $white-dark;
-  border-bottom: solid 1px $white-dark;
+  border-top: solid 1px $white-trans-3;
+  border-bottom: solid 1px $white-trans-3;
 }
 
 .contain .category-kind .kind-items .kind-item {
@@ -302,6 +321,7 @@ div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-kind, .
 
 .contain .category-kind .kind-items .kind-item img {
   margin: 15px;
+  margin-left: 0;
 }
 
 .contain .category-kind .kind-items .kind-item p {
@@ -333,13 +353,39 @@ div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-kind, .
 
 .contain .rank-kind .app-info .app-kind {
   font-size: 1.2em;
-  color: $white-dim;
+  color: $gray-trans-9;
 }
 
 .contain .rank-kind .app-info .app-level {
   font-size: 1.5em;
-  color: $orange;
+  color: $orange-trans-9;
 }
+
+.contain #search-page .default-view {
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.contain #search-page .default-view .title {
+  font-size: 2em;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.contain #search-page .default-view .items {
+  user-select: none;
+  color: $blue;
+}
+
+.contain #search-page .default-view .items .item {
+  margin-top: 10px;
+}
+
+.contain #search-page .default-view .items .item:hover {
+  margin-top: 10px;
+  color: $white-trans-9;
+}
+
 
 
 

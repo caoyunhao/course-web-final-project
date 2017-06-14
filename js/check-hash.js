@@ -7,7 +7,7 @@ $(document).ready(function () {
 });
 
 function checkHashLoad() {
-    openPageByHash(false)
+    openPageByHash(true);
 }
 
 
@@ -25,6 +25,7 @@ function openPageByHash(isFirst) {
     if(isLogged()){
         if(anchor === ''){
             if(isFirst){
+                // appAdaptScreen();
                 loginToIndex();
             }
             else {

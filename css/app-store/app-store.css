@@ -82,18 +82,37 @@ nav.nav-top {
   align-items: center;
 }
 
-.flex-row.flex-start {
+.flex-column {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.flex-row.flex-start, .flex-column.flex-start {
   justify-content: flex-start;
+}
+
+.flex-row.flex-items-start, .flex-column.flex-items-start {
+  align-items: flex-start;
 }
 
 nav.nav-top div.nav-top-contain {
   height: 100%;
   font-size: 2.2em;
+  padding: 10px;
+}
+
+nav.nav-top div.nav-top-contain .nav-item {
+  display: none;
+}
+
+nav.nav-top div.nav-top-contain .nav-item.active {
+  display: block;
 }
 
 nav.nav-top div.nav-top-contain p.title {
   text-align: center;
-  padding: 10px;
 }
 
 nav.nav-bottom {
@@ -124,11 +143,11 @@ nav.nav-bottom div.nav-contain .nav-item {
 }
 
 nav.nav-bottom div.nav-contain .nav-item:hover {
-  color: rgba(1, 159, 232, 0.9);
+  color: #0195ff;
 }
 
 nav.nav-bottom div.nav-contain .nav-item.active {
-  color: rgba(1, 159, 232, 0.9);
+  color: #0195ff;
 }
 
 nav.nav-bottom div.nav-contain .nav-item div.nav-item-contain {
@@ -210,7 +229,7 @@ div.contain div.contain-kind div.owl-carousel .kind-item {
 }
 
 div.contain div.contain-kind div.owl-carousel .kind-item:hover {
-  color: rgba(1, 159, 232, 0.9);
+  color: #0195ff;
 }
 
 div.contain div.contain-kind div.owl-carousel .kind-item img {
@@ -230,7 +249,7 @@ div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-name {
 }
 
 div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-kind, .item-info .app-price {
-  color: rgba(255, 255, 255, 0.3);
+  color: rgba(170, 170, 170, 0.9);
 }
 
 .logo {
@@ -293,6 +312,7 @@ div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-kind, .
 
 .contain .category-kind .kind-items .kind-item img {
   margin: 15px;
+  margin-left: 0;
 }
 
 .contain .category-kind .kind-items .kind-item p {
@@ -324,12 +344,37 @@ div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-kind, .
 
 .contain .rank-kind .app-info .app-kind {
   font-size: 1.2em;
-  color: rgba(255, 255, 255, 0.7);
+  color: rgba(170, 170, 170, 0.9);
 }
 
 .contain .rank-kind .app-info .app-level {
   font-size: 1.5em;
   color: rgba(255, 149, 0, 0.9);
+}
+
+.contain #search-page .default-view {
+  font-size: 1.6em;
+  text-align: center;
+}
+
+.contain #search-page .default-view .title {
+  font-size: 2em;
+  padding-top: 50px;
+  padding-bottom: 40px;
+}
+
+.contain #search-page .default-view .items {
+  user-select: none;
+  color: #0195ff;
+}
+
+.contain #search-page .default-view .items .item {
+  margin-top: 10px;
+}
+
+.contain #search-page .default-view .items .item:hover {
+  margin-top: 10px;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 /*# sourceMappingURL=app-store.css.map */

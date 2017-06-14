@@ -7,7 +7,7 @@ let XX_PIXELS = 992;
 let XXX_PIXELS = 1200;
 
 function appStoreLoad() {
-    $('.nav-item').click(function () {
+    $('.nav-bottom .nav-item').click(function () {
         removeNavActive();
         addNavActive($(this));
 
@@ -81,13 +81,22 @@ function appStoreLoad() {
 }
 
 function removeNavActive() {
-    $('.nav-item').removeClass('active');
-    $('.contain-item').removeClass('active');
+    $('.nav-bottom .nav-item').removeClass('active');
+    $('.contain .contain-item').removeClass('active');
 }
 
 function addNavActive(JQueryObj) {
     JQueryObj.addClass('active');
     let target_id = JQueryObj.data('target');
     $('#' + target_id).addClass('active');
-    $('#nav-top div p').html($(JQueryObj.find('p')[1]).html());
+    if (target_id === 'search-page') {
+        $('#nav-top #nav-top-title').removeClass('active');
+        $('#nav-top #search-input').addClass('active');
+    }
+    else {
+        $('#nav-top #search-input').removeClass('active');
+        $('#nav-top #nav-top-title').addClass('active');
+        $('#nav-top .nav-item.active p').text($(JQueryObj.find('p')[1]).text());
+    }
+    containSizeControl();
 }

@@ -1,11 +1,16 @@
-$blue: rgba(1, 159, 232, 0.9);
-$white: rgba(255, 255, 255, 0.9);
-$white-dim: rgba(255, 255, 255, 0.7);
-$white-mid: rgba(255, 255, 255, 0.5);
-$white-dark: rgba(255, 255, 255, 0.3);
-$dark: rgba(0, 0, 0, 0.9);
-$orange: rgba(255, 149, 0, 0.9);
+$gray: rgba(170, 170, 170, 1.0);
+$blue: rgba(1, 149, 255, 1.0);
+$orange: rgba(255, 149, 0, 1.0);
+
+$blue-trans-9: rgba(1, 149, 255, 0.9);
+$white-trans-9: rgba(255, 255, 255, 0.9);
+$white-trans-7: rgba(255, 255, 255, 0.7);
+$white-trans-5: rgba(255, 255, 255, 0.5);
+$white-trans-3: rgba(255, 255, 255, 0.3);
+$dark-trans-9: rgba(0, 0, 0, 0.9);
+$gray-trans-9: rgba(170, 170, 170, 0.9);
+$orange-trans-9: rgba(255, 149, 0, 0.9);
 
 $logo-radius: 22%;
 
-$font-tine: 300
+$font-weight-300: 300

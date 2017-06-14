@@ -23,7 +23,7 @@ function indexLoad() {
         dots: true,
     });
     addTransitionEndEvent($('#app_store_form').get(0), function () {
-        let store = $('#app_store_form')
+        let store = $('#app_store_form');
         store.css({
             '-webkit-transition':'',
         });
