@@ -24,18 +24,17 @@
 html {
   width: 100%;
   height: 100%;
-  background-color: #ffffff;
+  background-color: transparent;
 }
 
 body {
   margin: 0;
-  background-color: rgba(0, 0, 0, 0.9);
+  background-color: transparent;
   background-attachment: fixed;
   font-family: 'SF Pro Display', '.萍方-简';
   font-weight: 300;
   width: 100%;
   height: 100%;
-  color: black;
   color: rgba(255, 255, 255, 0.9);
   min-width: 500px;
   overflow: hidden;
@@ -48,15 +47,20 @@ a, p, span, button {
   display: block;
 }
 
+a {
+  color: inherit;
+}
+
+a:hover {
+  text-decoration: none;
+  color: inherit;
+  cursor: pointer;
+}
+
 button {
   outline: none;
 }
 
-@media screen and (max-width: 499px) {
-  body {
-    overflow-x: auto;
-  }
-}
 nav {
   width: 100%;
   height: 75px;
@@ -71,11 +75,19 @@ nav.nav-top {
   border-bottom-width: 1px;
 }
 
-nav.nav-top div.nav-top-contain {
-  height: 100%;
+.flex-row {
   display: flex;
   flex-direction: row;
   justify-content: center;
+  align-items: center;
+}
+
+.flex-row.flex-start {
+  justify-content: flex-start;
+}
+
+nav.nav-top div.nav-top-contain {
+  height: 100%;
   font-size: 2.2em;
 }
 
@@ -138,8 +150,17 @@ nav.nav-bottom div.nav-contain .nav-item p.nav-icon {
 
 div.contain {
   width: 100%;
+  background: transparent;
   overflow-x: hidden;
   overflow-y: visible;
+}
+
+div.contain div.contain-item {
+  display: none;
+}
+
+div.contain div.contain-item.active {
+  display: block;
 }
 
 div.contain div.owl-carousel.slide-content {
@@ -196,30 +217,119 @@ div.contain div.contain-kind div.owl-carousel .kind-item img {
   border-radius: 22%;
 }
 
-.kind-item p {
+div.contain div.contain-kind div.owl-carousel .kind-item p {
   margin-top: 5px;
 }
 
-.kind-item .item-info {
+div.contain div.contain-kind div.owl-carousel .kind-item .item-info {
   font-weight: 300;
 }
 
-.item-info .app-name {
+div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-name {
   color: rgba(255, 255, 255, 0.9);
 }
 
-.item-info .app-kind, .item-info .app-price {
-  color: rgba(255, 255, 255, 0.5);
+div.contain div.contain-kind div.owl-carousel .kind-item .item-info .app-kind, .item-info .app-price {
+  color: rgba(255, 255, 255, 0.3);
 }
 
-.contain-kind .kind-divide {
+.logo {
+  user-select: none;
+}
+
+.logo img {
+  border-radius: 22%;
+}
+
+.logo.padding img {
+  margin: 22%;
+}
+
+.logo.small img {
+  border-radius: 22%;
+  height: 75px;
+}
+
+.logo.middle img {
+  border-radius: 22%;
+  height: 125px;
+}
+
+.kind-divide {
   position: absolute;
   bottom: 0;
   width: 100%;
   height: 100%;
   margin-left: 5%;
-  border-bottom: solid 1px rgba(255, 255, 255, 0.7);
-  z-index: -100;
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+.contain .category-kind {
+  border-top: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+.contain .category-kind .kind-name {
+  padding-top: 25px;
+  padding-left: 15px;
+  padding-bottom: 15px;
+  color: rgba(255, 255, 255, 0.7);
+  background-color: transparent;
+  font-size: 1.2em;
+}
+
+.contain .category-kind .kind-items {
+  border-top: solid 1px rgba(255, 255, 255, 0.3);
+  border-bottom: solid 1px rgba(255, 255, 255, 0.3);
+}
+
+.contain .category-kind .kind-items .kind-item {
+  position: relative;
+}
+
+.contain .category-kind .kind-items .kind-item .item-contain {
+  position: relative;
+  padding-left: 5%;
+}
+
+.contain .category-kind .kind-items .kind-item img {
+  margin: 15px;
+}
+
+.contain .category-kind .kind-items .kind-item p {
+  font-size: 2em;
+}
+
+.contain .rank-kind .kind-item {
+  position: relative;
+}
+
+.contain .rank-kind .number {
+  font-size: 3em;
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.contain .rank-kind .app-info {
+  padding-left: 5%;
+  padding-right: 5%;
+}
+
+.contain .rank-kind .app-info p {
+  margin-top: 7px;
+}
+
+.contain .rank-kind .app-info .app-name {
+  font-size: 1.5em;
+}
+
+.contain .rank-kind .app-info .app-kind {
+  font-size: 1.2em;
+  color: rgba(255, 255, 255, 0.7);
+}
+
+.contain .rank-kind .app-info .app-level {
+  font-size: 1.5em;
+  color: rgba(255, 149, 0, 0.9);
 }
 
 /*# sourceMappingURL=app-store.css.map */

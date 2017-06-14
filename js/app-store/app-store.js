@@ -2,14 +2,15 @@
  * Created by Cao on 2017/6/11.
  */
 
-X_PIXELS = 768;
-XX_PIXELS = 992;
-XXX_PIXELS = 1200;
+let X_PIXELS = 768;
+let XX_PIXELS = 992;
+let XXX_PIXELS = 1200;
 
 function appStoreLoad() {
     $('.nav-item').click(function () {
         removeNavActive();
-        addNavActive($(this))
+        addNavActive($(this));
+
     });
     $('#slide-content').owlCarousel(
         {
@@ -28,6 +29,15 @@ function appStoreLoad() {
                     items: 2,
                 },
                 992: {
+                    items: 2,
+                },
+                1200: {
+                    items: 2,
+                },
+                1400: {
+                    items: 3,
+                },
+                1600: {
                     items: 3,
                 }
             },
@@ -71,9 +81,13 @@ function appStoreLoad() {
 }
 
 function removeNavActive() {
-    $('.nav-item').removeClass('active')
+    $('.nav-item').removeClass('active');
+    $('.contain-item').removeClass('active');
 }
 
 function addNavActive(JQueryObj) {
-    JQueryObj.addClass('active')
+    JQueryObj.addClass('active');
+    let target_id = JQueryObj.data('target');
+    $('#' + target_id).addClass('active');
+    $('#nav-top div p').html($(JQueryObj.find('p')[1]).html());
 }

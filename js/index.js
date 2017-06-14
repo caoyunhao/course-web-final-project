@@ -25,7 +25,7 @@ function indexLoad() {
     addTransitionEndEvent($('#app_store_form').get(0), function () {
         let store = $('#app_store_form')
         store.css({
-            // '-webkit-transition':'',
+            '-webkit-transition':'',
         });
         if (store.css('top') !== '52px'){
             let contain = $('#contain');
