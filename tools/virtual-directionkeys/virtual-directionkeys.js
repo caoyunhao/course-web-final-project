@@ -6,7 +6,7 @@ $(document).ready(function () {
     let vdkObj = $('#virtual_directionkeys');
 
     let virtual_directionkeys =
-        '<div style="position:absolute; left: 33.333333%; top: 0;width: 33.333333%; height: 50%; padding: 2%; box-sizing: border-box; user-select: none"> <div id="virtual_directionkeys_up" style="background-image: url(../../src/icon/娱乐-快乐男声.jpg); width: 100%; height: 100%"></div></div>'
+        '<div style="position:absolute; left: 33.333333%; top: 0;width: 33.333333%; height: 50%; padding: 2%; box-sizing: border-box; user-select: none"> <div id="virtual_directionkeys_up" style="background-image: url(../../src/tools/up.svg); width: 100%; height: 100%"></div></div>'
         + '<div style="position:absolute; left: 0%; top: 50%;width: 33.333333%; height: 50%; padding: 2%; box-sizing: border-box; user-select: none"> <div id="virtual_directionkeys_left" style="background-image: url(../../src/tools/left.svg); width: 100%; height: 100%"></div></div>'
         + '<div style="position:absolute; left: 33.333333%; top: 50%;width: 33.333333%; height: 50%; padding: 2%; box-sizing: border-box; user-select: none"> <div id="virtual_directionkeys_down" style="background-image: url(../../src/tools/down.svg); width: 100%; height: 100%"></div></div>'
         + '<div style="position:absolute; left: 66.666666%; top: 50%;width: 33.333333%; height: 50%; padding: 2%; box-sizing: border-box; user-select: none"> <div id="virtual_directionkeys_right" style="background-image: url(../../src/tools/right.svg); width: 100%; height: 100%"></div></div>'
@@ -31,7 +31,7 @@ function addMouseDownEvent(id, keyCode, t_interval, t_timeout) {
         t_timeout = setTimeout(function () {
             t_interval = setInterval(function () {
                 fireKeyEvent(document.getElementById(id), 'keydown', keyCode)
-            }, 100)
+            }, 50)
         }, 500)
     }).mouseup(function () {
         fireKeyEvent(document.getElementById(id), 'keyup', keyCode);
